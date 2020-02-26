@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор ремонта</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="calculator">
+        <div class="container">
+            <h1>Калькулятор ремонта</h1>
+            <form action="" class="repair-calculator">
+                <fieldset class="type-repair">
+                    <legend>Тип ремонта</legend>
+                    <div>
+                        <input type="radio" name="typeRepair" id="cosmeticRepairsRoom" value="cosmeticRepairsRoom"
+                            checked>
+                        <label for="cosmeticRepairsRoom" class="label-radio">Косметический ремонт в комнате</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="typeRepair" id="redecorating" value="redecorating">
+                        <label for="redecorating" class="label-radio">Косметический ремонт</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="typeRepair" id="overhaul" value="overhaul">
+                        <label for="overhaul" class="label-radio">Капитальный ремонт</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="typeRepair" id="eliteRepair" value="eliteRepair">
+                        <label for="eliteRepair" class="label-radio">Элитный ремонт</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="typeRepair" id="repairNewBuilding" value="repairNewBuilding">
+                        <label for="repairNewBuilding" class="label-radio">Ремонт в новостройке</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="constraint">
+                    <legend>Стесненность</legend>
+                    <div>
+                        <input type="checkbox" name="constraint" id="constraint" value="constraint">
+                        <label for="constraint" class="label-radio">Однокомнатная квартира</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="room-characteristics">
+                    <legend>Характеристики помещений</legend>
+                    <div>
+                        <input type="number" name="roomArea" id="roomArea" min="0" value="1" step="0.1" size="3">
+                        <label for="roomArea">Общая площадь</label>
+                    </div>
+                    <div>
+                        <input type="number" name="ceilingHeight" id="ceilingHeight" min="0" value="2.7" step="0.1"
+                            size="3">
+                        <label for="ceilingHeight">Высота потолков</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="wall-decoration">
+                    <legend>Отделка стен</legend>
+                    <div>
+                        <input type="radio" name="wallDecoration" id="stuccoLighthouse" value="stuccoLighthouse"
+                            checked>
+                        <label for="stuccoLighthouse" class="label-radio">Окраска стен с штукатуркой под маяк</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="wallDecoration" id="stuccoRule" value="stuccoRule">
+                        <label for="stuccoRule" class="label-radio">Окраска стен с штукатуркой под правило</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="wallDecoration" id="wallpapering" value="wallpapering">
+                        <label for="wallpapering" class="label-radio">Оклейка обоями</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="wallDecoration" id="decorativePlaster" value="decorativePlaster">
+                        <label for="decorativePlaster" class="label-radio">Декоративная штукатурка</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="floor-finish">
+                    <legend>Отделка пола</legend>
+                    <div>
+                        <input type="radio" name="floorFinish" id="laminateLinoleum" value="laminateLinoleum" checked>
+                        <label for="laminateLinoleum" class="label-radio">Ламинат, линолеум</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="floorFinish" id="parquetBoard" value="parquetBoard">
+                        <label for="parquetBoard" class="label-radio">Паркет, доска</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="additional-work">
+                    <legend>Дополнительные работы</legend>
+                    <div>
+                        <input type="checkbox" name="redevelopment" id="redevelopment" value="redevelopment">
+                        <label for="redevelopment" class="label-radio">Перепланировка</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="dismantling" id="dismantling" value="dismantling">
+                        <label for="dismantling" class="label-radio">Демонтаж</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="ceiling" id="ceiling" value="ceiling">
+                        <label for="ceiling" class="label-radio">Потолок под маяк и/или гипсокартонный потолок в 1
+                            уровень</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="electricalPreparation" id="electricalPreparation"
+                            value="electricalPreparation">
+                        <label for="electricalPreparation" class="label-radio">Электроподготовка</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="waterSupply" id="waterSupply" value="waterSupply">
+                        <label for="waterSupply" class="label-radio">ХВ, ГВ, канализация</label>
+                    </div>
+                </fieldset>
+                <fieldset class="optional-equipment">
+                    <legend>Дополнительное оборудование</legend>
+                    <div>
+                        <input type="checkbox" name="toilet" id="toilet" value="toilet">
+                        <label for="toilet" class="label-radio">Унитаз</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="sink" id="sink" value="sink">
+                        <label for="sink" class="label-radio">Раковина</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="heatedTowelRail" id="heatedTowelRail" value="heatedTowelRail">
+                        <label for="heatedTowelRail" class="label-radio">Полотенцесушитель</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="washer" id="washer" value="washer">
+                        <label for="washer" class="label-radio">Стиральная машина</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="bathroom" id="bathroom" value="bathroom">
+                        <label for="bathroom" class="label-radio">Ванная</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="showerStall" id="showerStall" value="showerStall">
+                        <label for="showerStall" class="label-radio">Душевая кабина</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="waterHeater" id="waterHeater" value="waterHeater">
+                        <label for="waterHeater" class="label-radio">Водонагреватель</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="moidodyr" id="moidodyr" value="moidodyr">
+                        <label for="moidodyr" class="label-radio">Мойдодыр</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="leakageSystem" id="leakageSystem" value="leakageSystem">
+                        <label for="leakageSystem" class="label-radio">Система от протечек</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="wallHungToilet" id="wallHungToilet" value="wallHungToilet">
+                        <label for="wallHungToilet" class="label-radio">Унитаз подвесной</label>
+                    </div>
+                </fieldset>
+
+                <div class="total_price">
+                    <span class="total_price__wrapp">
+                        <span class="total_price__sum">4000</span>
+                        <span class="total_price__val">₽</span>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
